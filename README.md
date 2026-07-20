@@ -10,7 +10,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/karishma-premnath)
 [![IEEE](https://img.shields.io/badge/-IEEE_Xplore-00629B?style=flat-square&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11545113)
-[![Email](https://img.shields.io/badge/-Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:[FILL: Karishma's email — the resume lists Premnath.ka@northeastern.edu, double-check this is hers and not a copy of her sister's])
+[![Email](https://img.shields.io/badge/-Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:[FILL: Karishma's email — the resume lists Premnath.ka@northeastern.edu.])
 
 </div>
 
