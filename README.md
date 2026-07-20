@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=1D9E75&center=true&vCenter=true&width=680&lines=_Karishma+Premnath;MS+ECE+%40+Northeastern+%7C+PLC+Control+Systems+%2B+ML;IEEE-published+%7C+Embedded+%2B+Instrumentation;Open+to+Co-op+%E2%80%94+Control+Systems+%2F+Robotics)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=1D9E75&center=true&vCenter=true&width=680&lines=_Karishma+Premnath;MS+ECE+%40+Northeastern+%7C+PLC+%2B+Control+Systems+%2B+ML;IEEE-published+%7C+Embedded+%2B+Instrumentation;Open+to+Co-op+%E2%80%94+Control+Systems+%2F+Robotics)](https://git.io/typing-svg)
 
 <br/>
 
