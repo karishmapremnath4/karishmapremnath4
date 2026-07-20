@@ -24,7 +24,7 @@ university:  Northeastern University, Boston
 undergrad:   B.Tech, Electronics & Instrumentation Engineering (SASTRA)
 focus:       [ Control Systems, PLC , Machine Learning, Embedded, Robotics ]
 published:   IEEE AIDE 2026  # ML-based Model Predictive Control
-status:      Open to Co-op / Internship — Control Systems, Robotics, Automation
+status:      Open to Co-op / Internship — Control Systems, Robotics, Automation, PLC
 ```
 
 ---
