@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=1D9E75&center=true&vCenter=true&width=680&lines=_Karishma+Premnath;MS+ECE+%40+Northeastern+%7C+Control+Systems+%2B+ML;IEEE-published+%7C+Embedded+%2B+Instrumentation;Open+to+Co-op+%E2%80%94+Control+Systems+%2F+Robotics)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=1D9E75&center=true&vCenter=true&width=680&lines=_Karishma+Premnath;MS+ECE+%40+Northeastern+%7C+PLC+Control+Systems+%2B+ML;IEEE-published+%7C+Embedded+%2B+Instrumentation;Open+to+Co-op+%E2%80%94+Control+Systems+%2F+Robotics)](https://git.io/typing-svg)
 
 <br/>
 
@@ -22,7 +22,7 @@ name:        Karishma Premnath
 degree:      M.S. Electrical & Computer Engineering  (CGPA 3.834)
 university:  Northeastern University, Boston
 undergrad:   B.Tech, Electronics & Instrumentation Engineering (SASTRA)
-focus:       [ Control Systems, Machine Learning, Embedded, Robotics ]
+focus:       [ Control Systems, PLC , Machine Learning, Embedded, Robotics ]
 published:   IEEE AIDE 2026  # ML-based Model Predictive Control
 status:      Open to Co-op / Internship — Control Systems, Robotics, Automation
 ```
