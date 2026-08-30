@@ -32,19 +32,20 @@ before I think in code.
 A tank level that must hold steady while the inlet flow fights it. The answer is a
 **cascade** — the slow loop sets the target for the fast one:
 
-```mermaid
-flowchart LR
-    SP([level setpoint 1800 mm]) --> LIC
-    LIC["LIC-102 level PID - outer, slow"] -->|flow setpoint| FIC
-    FIC["FIC-101 flow PID - inner, fast"] --> FCV["FCV-101 control valve"]
-    FCV --> TANK[("T-102 treatment tank")]
-    TANK -.->|LT-102| LIC
-    FCV -.->|FT-101| FIC
-
-    style LIC fill:#0B5394,stroke:#0B5394,color:#fff
-    style FIC fill:#1D9E75,stroke:#1D9E75,color:#fff
-    style FCV fill:#E8710A,stroke:#E8710A,color:#fff
-    style TANK fill:#37474F,stroke:#37474F,color:#fff
+```
+                 level SP 1800 mm
+                        │
+                        ▼
+      ┌───────────┐ flow SP  ┌───────────┐      ┌──────────┐      ┌─────────┐
+      │  LIC-102  ├─────────►│  FIC-101  ├─────►│ FCV-101  ├─────►│  T-102  │
+      │ level PID │          │ flow PID  │      │  valve   │      │  tank   │
+      │   outer   │          │   inner   │      └──────────┘      └────┬────┘
+      └─────▲─────┘          └─────▲─────┘                             │
+            │                      │                                   │
+            │                      └────────── FT-101 ─────────────────┤
+            │                                   flow                   │
+            └───────────────────── LT-102 ──────────────────────────────┘
+                                    level
 ```
 
 The inner loop rejects flow disturbances before they ever reach the level. Below it,
@@ -53,16 +54,15 @@ to depend on the same device that runs the process.
 
 ## ⬢ &nbsp;Batch sequence
 
-```mermaid
-stateDiagram-v2
-    direction LR
-    [*] --> IDLE
-    IDLE --> FILL: start pressed, no trip
-    FILL --> HEAT: level reaches 1200 mm
-    HEAT --> DRAIN: setpoint held
-    FILL --> DRAIN: timeout 900 s, alarm A-009
-    HEAT --> DRAIN: timeout 1800 s, alarm A-009
-    DRAIN --> IDLE
+```
+   ┌──────┐  start,   ┌──────┐  1200 mm  ┌──────┐  setpoint  ┌───────┐
+   │ IDLE ├──no trip─►│ FILL ├──────────►│ HEAT ├───held────►│ DRAIN │
+   └───▲──┘           └───┬──┘           └───┬──┘            └───┬───┘
+       │                  │                  │                   │
+       │                  │ timeout 900 s    │ timeout 1800 s    │
+       │                  └────────► alarm A-009 ◄───┘           │
+       │                                                         │
+       └─────────────────────────────────────────────────────────┘
 ```
 
 ## ⬢ &nbsp;Selected work
