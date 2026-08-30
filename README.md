@@ -3,6 +3,15 @@
      github.com/karishmapremnath4
      ============================================================ -->
 
+```
+█   █   ███   ████   █████   ████  █   █  █   █   ███
+█  █   █   █  █   █    █    █      █   █  ██ ██  █   █
+███    █████  ████     █     ███   █████  █ █ █  █████
+█  █   █   █  █  █     █        █  █   █  █   █  █   █
+█   █  █   █  █   █  █████  ████   █   █  █   █  █   █
+                                       P R E M N A T H
+```
+
 <table>
 <tr>
 <td width="270" align="center" valign="top">
@@ -31,7 +40,7 @@ process control and machine learning.
 
 The through-line: a control system isn't finished when it compiles. It's finished
 when someone has tried to make it fail and written down what happened — which is
-why most projects below end in a test count, not a demo.
+why every project below ends in a test count, not a demo.
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/karishma-premnath)
 [![IEEE](https://img.shields.io/badge/-IEEE_Xplore-00629B?style=flat-square&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11545113)
@@ -44,16 +53,41 @@ why most projects below end in a test count, not a demo.
 
 ---
 
-```yaml
-# karishma.yml
-name:        Karishma Premnath
-degree:      M.S. Electrical & Computer Engineering   (GPA 3.834 / 4.00)
-university:  Northeastern University, Boston          (Jan 2026 – May 2028)
-undergrad:   B.Tech, Electronics & Instrumentation Engineering (SASTRA)
-focus:       [ Control Systems, PLC, Machine Learning, Embedded, Robotics ]
-published:   IEEE AIDE 2026   # ML-based Model Predictive Control
-standards:   [ IEC 61131-3, ISA-5.1, ISA-18.2, FAT ]
-status:      Open to Spring 2027 Co-op — Control Systems, Robotics, Automation, PLC
+### `// profile-scan`
+
+```
+╭────────────────────────────────────────────────────────────────────────╮
+│ karishmapremnath4@github  ~ $ ./profile-scan --live             ● LIVE │
+├────────────────────────────────────────────────────────────────────────┤
+│ SUBJECT       Karishma Premnath                                        │
+│ HANDLE        @karishmapremnath4                                       │
+│ ROLE          M.S. ECE @ Northeastern  ·  Control + PLC + ML           │
+│ LOCATION      Boston, MA                                               │
+│ STATUS        Open to Spring 2027 Co-op                                │
+│                                                                        │
+│ PUBLISHED     IEEE AIDE 2026  ·  IEEE Xplore  ·  doc/11545113          │
+│ STANDARDS     IEC 61131-3 · ISA-5.1 · ISA-18.2 · FAT                   │
+│ LANGUAGES     Python · Structured Text · Ladder · Embedded C           │
+│ HARDWARE      Lab temperature control station (closed loop)            │
+╰────────────────────────────────────────────────────────────────────────╯
+```
+
+---
+
+### `// signal`
+
+```
+╭────────────────────────────────────────────────────────────────────────╮
+│ karishmapremnath4@github  ~ $ ./signal --sort=weight        ● VERIFIED │
+├────────────────────────────────────────────────────────────────────────┤
+│ PUBLICATION   1  ·  IEEE Xplore, peer-reviewed                         │
+│ FAT CASES     40 executed  ·  6 defects found  ·  40/40 pass           │
+│ PLC I/O       33 signals  ·  12 alarms  ·  8 interlocks                │
+│ CTRL LOOPS    4 PID  ·  1 cascade pair  ·  1 ratio pair                │
+│ ST DATASET    300 programs  ·  8 defect classes                        │
+│ BEST MODEL    Ridge MPC  ·  MSE 0.0058  ·  ITAE 12.2788                │
+│ PLANT TIME    On-site PLC/SCADA, cement production unit                │
+╰────────────────────────────────────────────────────────────────────────╯
 ```
 
 ---
@@ -78,7 +112,9 @@ status:      Open to Spring 2027 Co-op — Control Systems, Robotics, Automation
 
 ### `// projects`
 
-**`water-treatment-skid/`** — *Full PLC control system: design → code → FAT* &nbsp;`Aug 2026`
+```
+▸ water-treatment-skid/                 IEC 61131-3 · FAT 40/40 · Aug 2026
+```
 
 A complete control-system package for a **two-stage water treatment skid**. Specified
 **4 PID loops** (a cascade level–flow pair and a ratio pair), **12 ISA-18.2 alarms**,
@@ -101,9 +137,11 @@ tripped and was recorded.
 
 > ⚠️ The plant is simulated. The control system, documentation and FAT are complete deliverables.
 
----
+<br/>
 
-**`plc-st-bug-detection/`** — *ML that finds logic bugs a compiler can't* &nbsp;`Jun 2026`
+```
+▸ plc-st-bug-detection/                   Python · scikit-learn · Jun 2026
+```
 
 Built a dataset of **300 PLC Structured Text programs** carrying **8 functional defect
 classes** — disabled interlocks, incorrect setpoints and similar — the kind that **compile
@@ -119,9 +157,11 @@ and the rule-based repair pass **rectified all 60 single-defect programs**.
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
 ![Static Analysis](https://img.shields.io/badge/Static_Analysis-37474f?style=flat-square)
 
----
+<br/>
 
-**`ml-mpc-temperature/`** — *Predictive controller design + ML tuning strategies*
+```
+▸ ml-mpc-temperature/                   MATLAB · Simulink · IEEE AIDE 2026
+```
 
 Designed and evaluated a model predictive controller incorporating **4 ML methods** — KNN,
 feedforward neural network, ridge regression and decision tree — against 4 conventional
@@ -133,9 +173,11 @@ control performance (**MSE 0.0058, ITAE 12.2788**). *(Basis for the IEEE publica
 ![Simulink](https://img.shields.io/badge/Simulink-FF7A00?style=flat-square)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
 
----
+<br/>
 
-**`smart-wearable-monitor/`** — *Dual respiratory + heart-rate wearable (single sensor)* &nbsp;`May 2024`
+```
+▸ smart-wearable-monitor/             Analog chain · Embedded C · May 2024
+```
 
 A wearable belt that monitors **both heart rate and respiratory rate from a single
 force-sensitive resistor**, replacing the two transducers conventional monitors need.
@@ -148,9 +190,11 @@ plus a **band-pass filter (2.5–5 Hz)** for the ballistocardiogram — evaluate
 ![Analog Design](https://img.shields.io/badge/Analog_Signal_Chain-37474f?style=flat-square)
 ![Sensors](https://img.shields.io/badge/Biomedical_Sensors-1565c0?style=flat-square)
 
----
+<br/>
 
-**`smart-parking-system/`** — *Automated real-time car-parking system* &nbsp;`Jun 2023`
+```
+▸ smart-parking-system/                  Arduino · IR · Android · Jun 2023
+```
 
 Manual tracking of 6 parking slots took 3 minutes per scan and caused delays at entry.
 Designed and deployed an automated system using **Arduino, IR sensors and embedded C**,
@@ -161,9 +205,11 @@ with control software and an Android app for live slot tracking. Cut tracking ti
 ![Embedded C](https://img.shields.io/badge/Embedded_C-00599C?style=flat-square&logo=c&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white)
 
----
+<br/>
 
-**`rpa-uipath-capstone/`** — *Workflow automation with UiPath*
+```
+▸ rpa-uipath-capstone/                                        UiPath · RPA
+```
 
 Automated repetitive data-generation, email-notification and form-submission tasks using
 **UiPath**, orchestrated for scheduled, error-free process automation.
@@ -176,9 +222,13 @@ Automated repetitive data-generation, email-notification and form-submission tas
 ### `// currently building`
 
 ```
-amr-mpc/         Differential-drive MPC for an autonomous mobile robot      [ in progress ]
-ast-gp-mpc/      GP-model MPC with chance constraints + Bayesian tuning     [ in progress ]
-plc-datalog-ml/  Reconstructing corrupted PLC/SCADA logs (GP + Transformer) [ in progress ]
+╭────────────────────────────────────────────────────────────────────────╮
+│ karishmapremnath4@github  ~ $ ./queue --status=wip                     │
+├────────────────────────────────────────────────────────────────────────┤
+│ amr-mpc/         Differential-drive MPC for an autonomous mobile robot │
+│ ast-gp-mpc/      GP-model MPC, chance constraints, Bayesian tuning     │
+│ plc-datalog-ml/  Reconstructing corrupted PLC/SCADA logs (GP + Trans.) │
+╰────────────────────────────────────────────────────────────────────────╯
 ```
 
 ---
@@ -250,7 +300,12 @@ SASTRA Deemed University — Thanjavur, Tamil Nadu, India
 
 <div align="center">
 
-`STATUS: OPEN_TO_WORK` — Spring 2027 Co-op · Control Systems · Automation · Robotics
+```
+╭────────────────────────────────────────────────────────────────────────╮
+│  STATUS: OPEN_TO_WORK — Spring 2027 Co-op                              │
+│  Control Systems  ·  Automation  ·  Robotics  ·  PLC                   │
+╰────────────────────────────────────────────────────────────────────────╯
+```
 
 [![Connect](https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/karishma-premnath)
 [![Read the paper](https://img.shields.io/badge/Read%20the%20IEEE%20paper-00629B?style=flat-square&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11545113)
