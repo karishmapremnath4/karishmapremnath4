@@ -1,110 +1,175 @@
 <div align="center">
 
+<img src="https://raw.githubusercontent.com/karishmapremnath4/wts-100-water-treatment-skid/main/drawings/pid.png" width="100%" alt="WTS-100 P&ID"/>
+
+<sub>*ISA-5.1 P&ID — WTS-100 water treatment skid, drawn as part of [this project](https://github.com/karishmapremnath4/wts-100-water-treatment-skid)*</sub>
+
+<br/>
+
 # Karishma Premnath
 
-**Control Systems · Industrial Automation · Instrumentation**
-MS Electrical & Computer Engineering — Northeastern University, Boston
+### Control Systems · Industrial Automation · Instrumentation
+
+**MS Electrical & Computer Engineering** — Northeastern University, Boston
+**BTech Electronics & Instrumentation** — SASTRA Deemed University
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/karishma-premnath)
-[![IEEE Xplore](https://img.shields.io/badge/IEEE_Xplore-00629B?style=for-the-badge&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11545113)
+[![IEEE](https://img.shields.io/badge/IEEE_Xplore-00629B?style=for-the-badge&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11545113)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:premnath.ka@northeastern.edu)
 
-![Open to Co-op](https://img.shields.io/badge/Open_to-Spring_2027_Co--op-1D9E75?style=flat-square)
-![Focus](https://img.shields.io/badge/Focus-Controls_·_PLC_·_Instrumentation-37474F?style=flat-square)
+![Open to Spring 2027 Co-op](https://img.shields.io/badge/●_Open_to-Spring_2027_Co--op-1D9E75?style=flat-square&labelColor=0D1117)
+
+</div>
+
+<br/>
+
+> I build control systems the way they get built on a job — process narrative first,
+> then the instrument index and I/O list, then the logic, then a simulated plant to
+> test against. My background is instrumentation, so I care about what's easy to skip:
+> failure directions, keeping control separate from protection, and testing that tries
+> to break things instead of confirming they work.
+
+<br/>
+
+<div align="center">
+
+|  |  |  |  |  |
+|:-:|:-:|:-:|:-:|:-:|
+| **4** | **8** | **12** | **33** | **40** |
+| control loops | interlocks | alarms | I/O signals | tests, all passing |
 
 </div>
 
 ---
 
-I build control systems the way they get built on a job: process narrative first, then
-the instrument index and I/O list, then the logic, then a simulated plant to test it
-against. My background is Electronics & Instrumentation, so I care about the parts
-that are easy to skip — failure directions, separating control from protection, and
-testing that tries to break things rather than confirm they work.
+<div align="center">
+
+## WTS-100 Water Treatment Skid
+
+**[`karishmapremnath4/wts-100-water-treatment-skid`](https://github.com/karishmapremnath4/wts-100-water-treatment-skid)**
+
+</div>
+
+A complete PLC control system, documented and tested end to end.
+
+<table>
+<tr>
+<td width="55%" valign="top">
+
+```
+DELIVERABLES
+  control narrative       process behaviour, modes, sequence
+  instrument index        33 signals, ranges, failure direction
+  signal scaling          4-20 mA to engineering units
+  ISA-5.1 P&ID            the drawing above
+  IEC 61131-3             Structured Text + ladder, 4 POUs
+  plant simulation        Modbus TCP, HMI, historian
+  factory acceptance test 14 cases, expected vs actual
+
+CONTROL
+  LIC-102 ──cascade──> FIC-101    level to flow
+  TIC-102                          temperature
+  FFIC-103                         dosing, ratio
+  sequence     IDLE → FILL → HEAT → DRAIN
+
+VERIFIED
+  FAT           14 / 14   ✓
+  ladder logic  26 / 26   ✓
+  OpenPLC       safety block compiles and runs
+```
+
+</td>
+<td width="45%" valign="top">
+
+<img src="https://raw.githubusercontent.com/karishmapremnath4/wts-100-water-treatment-skid/main/drawings/ladder_safety.png" width="100%" alt="Safety ladder"/>
+
+<sub>*POU_SAFETY — 6 rungs of interlocks and permissives, IEC 61131-3 Ladder Diagram*</sub>
+
+</td>
+</tr>
+</table>
+
+![IEC 61131-3](https://img.shields.io/badge/IEC_61131--3-0B5394?style=flat-square)
+![Structured Text](https://img.shields.io/badge/Structured_Text-0B5394?style=flat-square)
+![Ladder](https://img.shields.io/badge/Ladder_Diagram-0B5394?style=flat-square)
+![OpenPLC](https://img.shields.io/badge/OpenPLC-E8710A?style=flat-square)
+![Modbus TCP](https://img.shields.io/badge/Modbus_TCP-455A64?style=flat-square)
+![ISA-5.1](https://img.shields.io/badge/ISA--5.1-6A1B9A?style=flat-square)
+![ISA-18.2](https://img.shields.io/badge/ISA--18.2-6A1B9A?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=white)
 
 ---
 
-## `// featured`
+<div align="center">
 
-<table>
-<tr><td width="50%" valign="top">
+## ML-Assisted PLC Bug Detection
 
-### [WTS-100 Water Treatment Skid](https://github.com/karishmapremnath4/wts-100-water-treatment-skid)
+**[`karishmapremnath4/plc-st-bug-detector-ml`](https://github.com/karishmapremnath4/plc-st-bug-detector-ml)**
 
-Complete PLC control system — narrative, ISA-5.1 P&ID, instrument index, IEC 61131-3
-code, Modbus TCP plant simulation, HMI, historian, and a factory acceptance test.
+</div>
 
-```
-Control loops      4   cascade level-flow, ratio dosing
-Interlocks         8   cause / action / reset defined
-Alarms            12   first-out latching, ISA-18.2
-I/O signals       33   7 AI · 4 AO · 14 DI · 8 DO
-FAT cases         14   14/14 passing
-Logic tests       26   26/26 passing
-```
-
-Safety block also compiles and runs in **OpenPLC** as Structured Text.
-
-![IEC61131](https://img.shields.io/badge/IEC_61131--3-0B5394?style=flat-square)
-![OpenPLC](https://img.shields.io/badge/OpenPLC-E8710A?style=flat-square)
-![Modbus](https://img.shields.io/badge/Modbus_TCP-455A64?style=flat-square)
-![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=white)
-
-</td><td width="50%" valign="top">
-
-### [PLC-ST Bug Detector](https://github.com/karishmapremnath4/plc-st-bug-detector-ml)
-
-Machine learning that finds and repairs logic bugs in PLC Structured Text — the kind
-that compile cleanly and fail on the plant.
+Machine learning that finds and repairs logic bugs in Structured Text — the kind that
+compile cleanly and fail on the plant.
 
 ```
-Dataset          300   generated ST programs
-Defect classes     8   interlock drop, setpoint,
-                       missing edge detection, …
-Baseline       81.7%   12 features
-Final          100.0%  16 features, 60 held out
-Repair         60/60   rule-based, per defect class
+    12 features  ──>  81.7%    all models plateau near 80%
+                              THRESHOLD_OFF = 0%, features can't see setpoint values
+    14 features  ──>  85.0%    + max_real / min_real      THRESHOLD_OFF   0% → 100%
+    15 features  ──>  90.0%    + n_estop_uses             INTERLOCK_DROP 50% → 100%
+    16 features  ──> 100.0%    + n_dotq                   EDGE_MISS cleared
+
+    repair       ──>   60/60   rule-based fix per defect class
 ```
 
-Gains came from **fixing the features, not the model** — every classifier plateaued
-near 80% until the setpoint value became visible.
+The lesson is the diagnosis, not the number: every classifier stalled around 80% until
+the *features* could see the setpoint value. The repo says plainly why 100% on
+synthetic single-fault code is easier than real plant code.
 
 ![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![ST](https://img.shields.io/badge/Structured_Text-0B5394?style=flat-square)
-
-</td></tr>
-</table>
+![Structured Text](https://img.shields.io/badge/Structured_Text-0B5394?style=flat-square)
 
 ---
 
-## `// publication`
+<div align="center">
+
+## Publication · IEEE AIDE 2026
+
+</div>
 
 > **Model predictive controller design using machine learning models and implementation of parameter tuning**
 > Giri P., Deepana S., **Karishma P.**, Deepika G. P., Venkatesh S., R. Amirtharajan
-> *2026 International Conference on Artificial Intelligence and Data Engineering (AIDE)*, Nitte, India, pp. 326–333
+> *International Conference on Artificial Intelligence and Data Engineering (AIDE)*, Nitte, India, pp. 326–333
 > [`10.1109/AIDE69088.2026.11545113`](https://doi.org/10.1109/AIDE69088.2026.11545113)
 
-MPC on a **laboratory benchtop temperature control station** — real closed-loop
-control on hardware, not simulation. Four conventional modelling methods compared
-against four machine learning models:
+MPC validated on a **laboratory benchtop temperature control station** — real
+closed-loop control on hardware. Four conventional modelling methods against four
+machine learning models:
 
-| | Method | ISE | MSE | IAE | ITAE |
-|---|---|---|---|---|---|
-| ML | Feedforward NN | 0.9401 | 0.0188 | 3.2225 | 36.6548 |
-| **ML** | **Ridge regression** | **0.2918** | **0.0058** | **1.1103** | **12.2788** |
-| Conventional | Transfer function | 0.4880 | 0.0098 | 1.9484 | 14.3488 |
-| Conventional | State space | 0.4980 | 0.0108 | 1.9544 | 14.3502 |
+<div align="center">
 
-Ridge wins on every metric — **69% lower MSE** than the FNN — and costs less to
-compute, which is what matters in a real-time loop. Δu_max, R and Q are each swept
-independently to show where they stop helping.
+| Model | ISE | MSE | IAE | ITAE |
+|---|--:|--:|--:|--:|
+| Feedforward NN | 0.9401 | 0.0188 | 3.2225 | 36.6548 |
+| **Ridge regression** | **0.2918** | **0.0058** | **1.1103** | **12.2788** |
+| Transfer function | 0.4880 | 0.0098 | 1.9484 | 14.3488 |
+| State space | 0.4980 | 0.0108 | 1.9544 | 14.3502 |
 
-Full abstract, figures and results → [`publications`](https://github.com/karishmapremnath4/publications)
+</div>
+
+Ridge wins on every metric — **69% lower MSE** than the neural network — and costs
+less to compute, which is what decides it for a real-time loop. Δu_max, R and Q are
+swept independently to show where each stops helping.
+
+Abstract, figures and full results → **[`publications`](https://github.com/karishmapremnath4/publications)**
 
 ---
 
-## `// stack`
+<div align="center">
+
+## Stack
+
+</div>
 
 ```yaml
 control_automation:
@@ -125,32 +190,38 @@ programming:
 
 ---
 
-## `// experience`
+<div align="center">
 
-**Apollo Hospital** · Biomedical Engineering Intern · Trichy, India · Jun–Jul 2025
+## Experience
+
+</div>
+
+**Apollo Hospital** — Biomedical Engineering Intern · Trichy, India · `Jun–Jul 2025`
 Maintained 25+ diagnostic instruments across patient care units. Diagnosed and resolved
 6 instruments with a senior engineer through hardware-software interfacing, sensor
 connectivity and signal validation. Traced recurring connectivity faults and
 inconsistent signal thresholds on 3 devices, restoring all 3 to service.
 
-**Dalmia Cements** · Process Control & Automation Intern · Dalmiapuram, India · Jul 2024
+**Dalmia Cements** — Process Control & Automation Intern · Dalmiapuram, India · `Jul 2024`
 Monitored 10 process parameters through PLC and SCADA/HMI dashboards at a cement unit
 running crushing, pyroprocessing and packing. Traced 10 field instruments across 3
-production stages, recording signal type and measurement range for each. Documented
-15 process variations with sensor connectivity data.
+production stages, recording signal type and range for each. Documented 15 process
+variations with sensor connectivity data.
 
-**CodeBind Technologies** · Embedded Systems Intern · Chennai, India · Jun 2023
-Built an automated car parking system using Arduino, IR sensors and embedded C with an
+**CodeBind Technologies** — Embedded Systems Intern · Chennai, India · `Jun 2023`
+Built an automated car parking system with Arduino, IR sensors and embedded C plus an
 Android app. Cut slot-tracking time from 3 minutes to 10 seconds, with correct
 availability logged on 20 of 23 test runs.
 
 ---
 
-## `// education`
+<div align="center">
 
-| | | |
-|---|---|---|
-| **Northeastern University** | MS Electrical & Computer Engineering | Jan 2026 – May 2028 |
-| Boston, MA | GPA 3.834 / 4.00 · ML, Robotics | |
-| **SASTRA Deemed University** | BTech Electronics & Instrumentation | Oct 2021 – Sept 2025 |
-| Thanjavur, India | | |
+<sub>Northeastern University · GPA 3.834 / 4.00 · Jan 2026 – May 2028</sub>
+
+**Open to Spring 2027 co-op — controls, automation, instrumentation.**
+
+[![LinkedIn](https://img.shields.io/badge/Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/karishma-premnath)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:premnath.ka@northeastern.edu)
+
+</div>
