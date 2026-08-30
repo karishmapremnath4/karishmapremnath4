@@ -1,164 +1,136 @@
+<!-- ============================================================
+     KARISHMA PREMNATH — GitHub Profile README
+     ============================================================ -->
+
 <div align="center">
 
-# `KARISHMA PREMNATH`
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=1D9E75&center=true&vCenter=true&width=680&lines=_Karishma+Premnath;MS+ECE+%40+Northeastern+%7C+PLC+%2B+Control+Systems+%2B+ML;IEEE-published+%7C+Embedded+%2B+Instrumentation;Open+to+Co-op+%E2%80%94+Control+Systems+%2F+Robotics)](https://git.io/typing-svg)
 
-### CONTROL SYSTEMS ▸ INDUSTRIAL AUTOMATION ▸ INSTRUMENTATION
+<br/>
 
-![MS ECE](https://img.shields.io/badge/MS_ECE-Northeastern-C8102E?style=for-the-badge)
-![IEEE](https://img.shields.io/badge/Published-IEEE_AIDE_2026-00629B?style=for-the-badge&logo=ieee&logoColor=white)
-![Co-op](https://img.shields.io/badge/Open_to-Spring_2027_Co--op-1D9E75?style=for-the-badge)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/karishma-premnath)
-[![Email](https://img.shields.io/badge/Email-C5221F?style=flat-square&logo=gmail&logoColor=white)](mailto:premnath.ka@northeastern.edu)
-[![DOI](https://img.shields.io/badge/DOI-10.1109%2FAIDE69088.2026.11545113-00629B?style=flat-square)](https://doi.org/10.1109/AIDE69088.2026.11545113)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/karishma-premnath)
+[![IEEE](https://img.shields.io/badge/-IEEE_Xplore-00629B?style=flat-square&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11545113)
+[![Email](https://img.shields.io/badge/-Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:[FILL: Karishma's email — the resume lists Premnath.ka@northeastern.edu.])
 
 </div>
 
 ---
 
-<div align="center">
-
-**I build control systems end to end** — narrative, instrument index, PLC logic,
-and a simulated plant to prove it before anything touches hardware.
-Instrumentation background, so I think in **tags, ranges and failure directions**
-before I think in code.
-
-</div>
+```yaml
+# karishma.yml
+name:        Karishma Premnath
+degree:      M.S. Electrical & Computer Engineering  (CGPA 3.834)
+university:  Northeastern University, Boston
+undergrad:   B.Tech, Electronics & Instrumentation Engineering (SASTRA)
+focus:       [ Control Systems, PLC , Machine Learning, Embedded, Robotics ]
+published:   IEEE AIDE 2026  # ML-based Model Predictive Control
+status:      Open to Co-op / Internship — Control Systems, Robotics, Automation, PLC
+```
 
 ---
 
-## ⬢ &nbsp;The control problem I solve
+### `// publication`
 
-A tank level that must hold steady while the inlet flow fights it. The answer is a
-**cascade** — the slow loop sets the target for the fast one:
+**Model Predictive Controller Design using Machine Learning Models & Parameter Tuning**
+*IEEE AIDE 2026 — Technically Co-Sponsored Conference · Published in IEEE Xplore* 📄
 
-```
-                 level SP 1800 mm
-                        │
-                        ▼
-      ┌───────────┐ flow SP  ┌───────────┐      ┌──────────┐      ┌─────────┐
-      │  LIC-102  ├─────────►│  FIC-101  ├─────►│ FCV-101  ├─────►│  T-102  │
-      │ level PID │          │ flow PID  │      │  valve   │      │  tank   │
-      │   outer   │          │   inner   │      └──────────┘      └────┬────┘
-      └─────▲─────┘          └─────▲─────┘                             │
-            │                      │                                   │
-            │                      └────────── FT-101 ─────────────────┤
-            │                                   flow                   │
-            └───────────────────── LT-102 ──────────────────────────────┘
-                                    level
-```
+> An advanced MPC for precise thermal stability in a process development unit, comparing multiple ML models under varying parameter tuning. **Ridge-based MPC achieved the lowest MSE (0.0037) and ITAE (0.6382)** among the evaluated methods.
+>
+> 🔗 [ieeexplore.ieee.org/document/11545113](https://ieeexplore.ieee.org/document/11545113)
 
-The inner loop rejects flow disturbances before they ever reach the level. Below it,
-eight interlocks can pull permission from any actuator, and none of them are allowed
-to depend on the same device that runs the process.
+---
 
-## ⬢ &nbsp;Batch sequence
+### `// projects`
 
-```
-   ┌──────┐  start,   ┌──────┐  1200 mm  ┌──────┐  setpoint  ┌───────┐
-   │ IDLE ├──no trip─►│ FILL ├──────────►│ HEAT ├───held────►│ DRAIN │
-   └───▲──┘           └───┬──┘           └───┬──┘            └───┬───┘
-       │                  │                  │                   │
-       │                  │ timeout 900 s    │ timeout 1800 s    │
-       │                  └────────► alarm A-009 ◄───┘           │
-       │                                                         │
-       └─────────────────────────────────────────────────────────┘
-```
+**`ml-mpc-temperature/`** — *Predictive controller design + ML tuning strategies*
 
-## ⬢ &nbsp;Selected work
-
-<table>
-<tr>
-<th align="left" width="220">Project</th>
-<th align="left">What it is</th>
-</tr>
-<tr>
-<td valign="top">
-
-**[WTS-100](https://github.com/karishmapremnath4/wts-100-water-treatment-skid)**
-`water treatment skid`
-
-![IEC61131](https://img.shields.io/badge/IEC_61131--3-0B5394?style=flat-square)
-![OpenPLC](https://img.shields.io/badge/OpenPLC-E8710A?style=flat-square)
-![Modbus](https://img.shields.io/badge/Modbus_TCP-455A64?style=flat-square)
-![ISA](https://img.shields.io/badge/ISA--5.1-6A1B9A?style=flat-square)
-
-</td>
-<td valign="top">
-
-A complete PLC control system: control narrative, ISA-5.1 P&ID, instrument index and
-signal scaling, IEC 61131-3 Structured Text and ladder, a Modbus TCP plant simulation
-with HMI and historian, and a factory acceptance test.
-
-`4 loops` `8 interlocks` `12 alarms` `33 I/O` — **FAT 14/14** and **logic 26/26 passing**.
-The safety block also compiles and runs in OpenPLC.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**[PLC-ML](https://github.com/karishmapremnath4/plc-st-bug-detector-ml)**
-`ST defect detection`
+Designed and evaluated a model predictive controller incorporating **4 ML methods** — KNN, FNN, ridge regression, and decision tree — under varying tuning parameters. Ridge-based MPC delivered the best control performance (MSE 0.0037, ITAE 0.6382). *(Basis for the IEEE publication above.)*
 
 ![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=white)
-![sklearn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat-square&logo=mathworks&logoColor=white)
+![Simulink](https://img.shields.io/badge/Simulink-FF7A00?style=flat-square)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
 
-</td>
-<td valign="top">
+---
 
-Machine learning that finds and repairs logic bugs in Structured Text — dropped
-interlocks, wrong setpoints, missing edge detection. The defects that compile cleanly
-and fail on the plant.
+**`smart-wearable-monitor/`** — *Dual respiratory + heart-rate wearable (single sensor)*
 
-`300 programs` `8 defect classes` — **81.7% → 100%**, and the gain came from fixing
-the *features*, not the model.
+A smart wearable belt monitoring **both respiratory and heart rate from a single force-resistive sensor** — replacing multi-sensor architectures. Achieved high-precision non-invasive dual-parameter sensing via a low-pass filter (0.45 Hz), band-pass filter (2.5–5 Hz), and I–V amplification.
 
-</td>
-</tr>
-<tr>
-<td valign="top">
+![Embedded C](https://img.shields.io/badge/Embedded_C-00599C?style=flat-square&logo=c&logoColor=white)
+![Signal Processing](https://img.shields.io/badge/Signal_Processing-37474f?style=flat-square)
+![Sensors](https://img.shields.io/badge/Biomedical_Sensors-1565c0?style=flat-square)
 
-**[Publications](https://github.com/karishmapremnath4/publications)**
-`peer-reviewed`
+---
 
-![IEEE](https://img.shields.io/badge/IEEE-00629B?style=flat-square&logo=ieee&logoColor=white)
+**`smart-parking-system/`** — *Automated real-time car-parking system*
 
-</td>
-<td valign="top">
+An automated system regulating 6 parking slots in real time using **Arduino, IR sensors, and embedded C**, with an Android app for live slot tracking. **100% availability accuracy**; tracking time cut from 3 minutes to 10 seconds.
 
-Model predictive control using machine learning models, validated on a laboratory
-benchtop temperature control station — real closed-loop control on hardware.
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
+![Embedded C](https://img.shields.io/badge/Embedded_C-00599C?style=flat-square&logo=c&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white)
 
-Ridge regression beat the neural network on every error metric: **MSE 0.0058**,
-**ITAE 12.2788**, 69% lower MSE at lower computational cost.
+---
 
-</td>
-</tr>
-</table>
+**`rpa-uipath-capstone/`** — *Workflow automation with UiPath*
 
-## ⬢ &nbsp;Capability
+Automated repetitive data-generation, email-notification, and form-submission tasks using **UiPath**, orchestrated for scheduled, error-free process automation.
+
+![UiPath](https://img.shields.io/badge/UiPath-FA4616?style=flat-square&logo=uipath&logoColor=white)
+![RPA](https://img.shields.io/badge/RPA-37474f?style=flat-square)
+
+---
+
+### `// experience`
 
 ```
-PLC & CONTROL      IEC 61131-3 (Ladder · Structured Text) · CODESYS · OpenPLC
-                   PID and loop tuning · cascade · ratio · Model Predictive Control
-INTERFACES         SCADA · HMI · Modbus TCP
-INSTRUMENTATION    instrument index · I/O list · sensor selection and ranging
-                   4-20 mA loop design · signal conditioning · calibration · DAQ
-STANDARDS          ISA-5.1 (P&ID) · ISA-18.2 (alarms) · Factory Acceptance Test
-LANGUAGES          Python · C · Embedded C · Structured Text · SQL
-TOOLS              MATLAB · Simulink · LabVIEW · AutoCAD · Arduino IDE · Multisim
+Apollo Hospital           Biomedical Engineering Intern      (Jun–Jul 2025)
+├── Troubleshot 6+ medical device types (sensor connectivity, HW-SW integration)
+└── Resolved recurring connectivity faults on 3 devices → ~80% error reduction
+
+Dalmia Cements            Process Control & Automation Intern (Jul 2024)
+├── Monitored live PLC-SCADA plant operations across 3 production stages
+└── Reviewed 10+ industrial sensors / PLC panels; logged 15+ sensor deviation reports
+
+CodeBind Technologies     Embedded Systems Intern            (Jun 2023)
+└── Built automated car-parking system (Arduino + IR + embedded C) — see projects
+```
+
+---
+
+### `// stack`
+
+```python
+stack = {
+  "control_ml" : ["Predictive Modeling", "System Identification", "Pattern Recognition", "MPC"],
+  "tools"      : ["MATLAB", "Simulink", "LabVIEW", "Arduino IDE", "UiPath", "Tableau"],
+  "languages"  : ["Python", "C", "Java", "SQL"],
+  "domains"    : ["Embedded Systems", "PLC-SCADA", "Instrumentation", "Biomedical"],
+}
+```
+
+---
+
+### `// education`
+
+```
+Northeastern University — Boston, MA
+└── M.S. Electrical & Computer Engineering            (Jan 2026 – May 2028)
+    ├── CGPA : 3.834
+    └── Coursework : Machine Learning, Robotics
+
+SASTRA Deemed University — India
+└── B.Tech, Electronics & Instrumentation Engineering (2021 – 2025)
 ```
 
 ---
 
 <div align="center">
 
-**MS Electrical & Computer Engineering** · Northeastern University · GPA 3.834
-**BTech Electronics & Instrumentation** · SASTRA Deemed University
+`STATUS: OPEN_TO_WORK` — Control Systems · Robotics · Automation Co-op
 
-`Open to Spring 2027 co-op — controls, automation, instrumentation`
-
-[![LinkedIn](https://img.shields.io/badge/Let's_connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/karishma-premnath)
+[![Connect](https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/karishma-premnath)
+[![Read the paper](https://img.shields.io/badge/Read%20the%20IEEE%20paper-00629B?style=flat-square&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11545113)
 
 </div>
