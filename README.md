@@ -1,14 +1,18 @@
-<!-- ============================================================
-     KARISHMA PREMNATH — GitHub Profile README
-     github.com/karishmapremnath4
-     GitSkins frames + resume-accurate content
-     ============================================================ -->
+karishmapremnath4@github: ~$ whoami
 
-<p align="center">
-  <img src="https://www.gitskins.com/api/section/hero?username=karishmapremnath4&theme=github-dark" alt="KARISHMA PREMNATH profile hero" />
-</p>
+█  █  ██  ███  ███  ███ █  █ █   █  ██
+█ █  █  █ █  █  █  █    █  █ ██ ██ █  █
+██   ████ ███   █   ██  ████ █ █ █ ████
+█ █  █  █ █ █   █     █ █  █ █   █ █  █
+█  █ █  █ █  █ ███ ███  █  █ █   █ █  █
 
-<div align="center">
+███  ███  ████ █   █ █  █  ██  ███ █  █
+█  █ █  █ █    ██ ██ ██ █ █  █  █  █  █
+███  ███  ███  █ █ █ █ ██ ████  █  ████
+█    █ █  █    █   █ █  █ █  █  █  █  █
+█    █  █ ████ █   █ █  █ █  █  █  █  █
+
+control systems · plc · automation · instrumentation · embedded · ml
 
 **M.S. Electrical & Computer Engineering @ Northeastern** · Boston, MA
 Control systems · PLC & automation · instrumentation · embedded · applied ML
