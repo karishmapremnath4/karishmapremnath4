@@ -1,21 +1,19 @@
-karishmapremnath4@github: ~$ whoami
+<!-- ============================================================
+     KARISHMA PREMNATH — GitHub Profile README
+     github.com/karishmapremnath4
+     ============================================================ -->
 
-█  █  ██  ███  ███  ███ █  █ █   █  ██
-█ █  █  █ █  █  █  █    █  █ ██ ██ █  █
-██   ████ ███   █   ██  ████ █ █ █ ████
-█ █  █  █ █ █   █     █ █  █ █   █ █  █
-█  █ █  █ █  █ ███ ███  █  █ █   █ █  █
+<div align="center">
 
-███  ███  ████ █   █ █  █  ██  ███ █  █
-█  █ █  █ █    ██ ██ ██ █ █  █  █  █  █
-███  ███  ███  █ █ █ █ ██ ████  █  ████
-█    █ █  █    █   █ █  █ █  █  █  █  █
-█    █  █ ████ █   █ █  █ █  █  █  █  █
+<img src="https://github.com/karishmapremnath4.png" width="130" alt="Karishma Premnath" />
 
-control systems · plc · automation · instrumentation · embedded · ml
+### `@karishmapremnath4`
 
-**M.S. Electrical & Computer Engineering @ Northeastern** · Boston, MA
-Control systems · PLC & automation · instrumentation · embedded · applied ML
+[![Karishma Premnath](https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=44&duration=2600&pause=900&color=1D9E75&center=true&vCenter=true&width=900&height=75&lines=KARISHMA+PREMNATH)](https://github.com/karishmapremnath4)
+
+[![Tagline](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3200&pause=800&color=6E7B8B&center=true&vCenter=true&width=900&height=32&lines=Building+control+systems+that+get+tested+until+they+break.;M.S.+ECE+%40+Northeastern+%C2%B7+Boston%2C+MA;IEEE-published+%E2%80%94+MPC+on+real+hardware;Open+to+Spring+2027+Co-op)](https://github.com/karishmapremnath4)
+
+`Python` &nbsp; `MATLAB` &nbsp; `Structured Text` &nbsp; `Embedded C` &nbsp; `Ladder Logic`
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/karishma-premnath)
 [![IEEE Xplore](https://img.shields.io/badge/-IEEE_Xplore-00629B?style=flat-square&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11545113)
@@ -225,14 +223,6 @@ Relevant coursework: Machine Learning, Robotics
 
 **SASTRA Deemed University** — Thanjavur, India · `Oct 2021 – Sept 2025`
 B.Tech, Electronics & Instrumentation Engineering
-
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://www.gitskins.com/api/section/stats?username=karishmapremnath4&theme=github-dark" alt="GitHub Stats" />
-</p>
 
 ---
 
