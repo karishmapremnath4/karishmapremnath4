@@ -34,10 +34,10 @@ A tank level that must hold steady while the inlet flow fights it. The answer is
 
 ```mermaid
 flowchart LR
-    SP([level SP<br/>1800 mm]) --> LIC
-    LIC["<b>LIC-102</b><br/>level PID<br/><i>outer, slow</i>"] -->|flow setpoint| FIC
-    FIC["<b>FIC-101</b><br/>flow PID<br/><i>inner, fast</i>"] --> FCV["FCV-101<br/>control valve"]
-    FCV --> TANK[("T-102<br/>treatment tank")]
+    SP([level setpoint 1800 mm]) --> LIC
+    LIC["LIC-102 level PID - outer, slow"] -->|flow setpoint| FIC
+    FIC["FIC-101 flow PID - inner, fast"] --> FCV["FCV-101 control valve"]
+    FCV --> TANK[("T-102 treatment tank")]
     TANK -.->|LT-102| LIC
     FCV -.->|FT-101| FIC
 
@@ -57,11 +57,11 @@ to depend on the same device that runs the process.
 stateDiagram-v2
     direction LR
     [*] --> IDLE
-    IDLE --> FILL: start & LT-101 > 400 mm & no trip
-    FILL --> HEAT: LT-102 ≥ 1200 mm
+    IDLE --> FILL: start pressed, no trip
+    FILL --> HEAT: level reaches 1200 mm
     HEAT --> DRAIN: setpoint held
-    FILL --> DRAIN: timeout 900 s → A-009
-    HEAT --> DRAIN: timeout 1800 s → A-009
+    FILL --> DRAIN: timeout 900 s, alarm A-009
+    HEAT --> DRAIN: timeout 1800 s, alarm A-009
     DRAIN --> IDLE
 ```
 
