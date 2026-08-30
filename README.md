@@ -1,136 +1,126 @@
-<!-- ============================================================
-     KARISHMA PREMNATH — GitHub Profile README
-     ============================================================ -->
-
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=1D9E75&center=true&vCenter=true&width=680&lines=_Karishma+Premnath;MS+ECE+%40+Northeastern+%7C+PLC+%2B+Control+Systems+%2B+ML;IEEE-published+%7C+Embedded+%2B+Instrumentation;Open+to+Co-op+%E2%80%94+Control+Systems+%2F+Robotics)](https://git.io/typing-svg)
+# Karishma Premnath
 
-<br/>
+**MS Electrical & Computer Engineering, Northeastern University**
+Control systems · PLC & industrial automation · Instrumentation
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/karishma-premnath)
-[![IEEE](https://img.shields.io/badge/-IEEE_Xplore-00629B?style=flat-square&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11545113)
-[![Email](https://img.shields.io/badge/-Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:[FILL: Karishma's email — the resume lists Premnath.ka@northeastern.edu.])
+[![IEEE Xplore](https://img.shields.io/badge/-IEEE_Xplore-00629B?style=flat-square&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11545113)
+[![Email](https://img.shields.io/badge/-Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:premnath.ka@northeastern.edu)
+
+`Open to Spring 2027 Co-op` — Controls · Automation · Instrumentation
 
 </div>
 
 ---
 
-```yaml
-# karishma.yml
-name:        Karishma Premnath
-degree:      M.S. Electrical & Computer Engineering  (CGPA 3.834)
-university:  Northeastern University, Boston
-undergrad:   B.Tech, Electronics & Instrumentation Engineering (SASTRA)
-focus:       [ Control Systems, PLC , Machine Learning, Embedded, Robotics ]
-published:   IEEE AIDE 2026  # ML-based Model Predictive Control
-status:      Open to Co-op / Internship — Control Systems, Robotics, Automation, PLC
-```
+I come from an Electronics & Instrumentation background and I build control systems
+end to end: the process narrative and instrument index first, then the PLC logic,
+then a simulated plant to test it against. I care about the parts that are easy to
+skip — failure directions, interlock design, and testing that actually tries to break
+things.
+
+Published in IEEE AIDE 2026 on machine-learning model predictive control, validated
+on a laboratory temperature control station.
 
 ---
 
-### `// publication`
+## Repositories
 
-**Model Predictive Controller Design using Machine Learning Models & Parameter Tuning**
-*IEEE AIDE 2026 — Technically Co-Sponsored Conference · Published in IEEE Xplore* 📄
+### [wts-100-water-treatment-skid](https://github.com/karishmapremnath4/wts-100-water-treatment-skid)
+**A full PLC control system for a two-stage water treatment skid.**
 
-> An advanced MPC for precise thermal stability in a process development unit, comparing multiple ML models under varying parameter tuning. **Ridge-based MPC achieved the lowest MSE (0.0037) and ITAE (0.6382)** among the evaluated methods.
->
-> 🔗 [ieeexplore.ieee.org/document/11545113](https://ieeexplore.ieee.org/document/11545113)
+Control narrative, instrument index and signal scaling, an ISA-5.1 P&ID, IEC 61131-3
+Structured Text and ladder, a Modbus TCP plant simulation, an HMI and a historian.
+4 control loops (cascade level-flow, ratio dosing), 8 interlocks, 12 alarms,
+33 I/O signals.
 
----
+Tested with 14 factory acceptance test cases and 26 ladder logic tests — all passing.
+The safety block also compiles and runs in OpenPLC as Structured Text.
 
-### `// projects`
+`IEC 61131-3` `Structured Text` `Ladder` `Modbus TCP` `OpenPLC` `ISA-5.1` `ISA-18.2`
 
-**`ml-mpc-temperature/`** — *Predictive controller design + ML tuning strategies*
+### [plc-st-bug-detector-ml](https://github.com/karishmapremnath4/plc-st-bug-detector-ml)
+**Finding and fixing logic bugs in PLC Structured Text with machine learning.**
 
-Designed and evaluated a model predictive controller incorporating **4 ML methods** — KNN, FNN, ridge regression, and decision tree — under varying tuning parameters. Ridge-based MPC delivered the best control performance (MSE 0.0037, ITAE 0.6382). *(Basis for the IEEE publication above.)*
+300 generated ST programs containing 8 classes of functional defect — dropped
+interlocks, wrong setpoints, missing edge detection — the kind that compile fine and
+fail on the plant. Feature extraction, then a decision tree to classify the defect,
+then a rule-based repair.
 
-![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=white)
-![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat-square&logo=mathworks&logoColor=white)
-![Simulink](https://img.shields.io/badge/Simulink-FF7A00?style=flat-square)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+Accuracy went from 81.7% to 100% on 60 held-out programs by fixing the features
+rather than the model. The README is honest about why 100% is easier than real code.
 
----
+`Python` `scikit-learn` `Structured Text`
 
-**`smart-wearable-monitor/`** — *Dual respiratory + heart-rate wearable (single sensor)*
-
-A smart wearable belt monitoring **both respiratory and heart rate from a single force-resistive sensor** — replacing multi-sensor architectures. Achieved high-precision non-invasive dual-parameter sensing via a low-pass filter (0.45 Hz), band-pass filter (2.5–5 Hz), and I–V amplification.
-
-![Embedded C](https://img.shields.io/badge/Embedded_C-00599C?style=flat-square&logo=c&logoColor=white)
-![Signal Processing](https://img.shields.io/badge/Signal_Processing-37474f?style=flat-square)
-![Sensors](https://img.shields.io/badge/Biomedical_Sensors-1565c0?style=flat-square)
-
----
-
-**`smart-parking-system/`** — *Automated real-time car-parking system*
-
-An automated system regulating 6 parking slots in real time using **Arduino, IR sensors, and embedded C**, with an Android app for live slot tracking. **100% availability accuracy**; tracking time cut from 3 minutes to 10 seconds.
-
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
-![Embedded C](https://img.shields.io/badge/Embedded_C-00599C?style=flat-square&logo=c&logoColor=white)
-![Android](https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white)
+### [publications](https://github.com/karishmapremnath4/publications)
+**Peer-reviewed work, with abstracts and results.**
 
 ---
 
-**`rpa-uipath-capstone/`** — *Workflow automation with UiPath*
+## Publication
 
-Automated repetitive data-generation, email-notification, and form-submission tasks using **UiPath**, orchestrated for scheduled, error-free process automation.
+**Model predictive controller design using machine learning models and implementation
+of parameter tuning**
+Giri P., Deepana S., **Karishma P.**, Deepika G. P., Venkatesh S., R. Amirtharajan
+*2026 International Conference on Artificial Intelligence and Data Engineering (AIDE)*,
+Nitte, India, pp. 326–333
+[10.1109/AIDE69088.2026.11545113](https://doi.org/10.1109/AIDE69088.2026.11545113)
 
-![UiPath](https://img.shields.io/badge/UiPath-FA4616?style=flat-square&logo=uipath&logoColor=white)
-![RPA](https://img.shields.io/badge/RPA-37474f?style=flat-square)
+An MPC for a laboratory benchtop temperature control station — real closed-loop
+control on hardware. Four conventional modelling methods (transfer function, ARX,
+Box-Jenkins, state space) compared against four machine learning models (FNN,
+decision tree, KNN, ridge regression).
 
----
-
-### `// experience`
-
-```
-Apollo Hospital           Biomedical Engineering Intern      (Jun–Jul 2025)
-├── Troubleshot 6+ medical device types (sensor connectivity, HW-SW integration)
-└── Resolved recurring connectivity faults on 3 devices → ~80% error reduction
-
-Dalmia Cements            Process Control & Automation Intern (Jul 2024)
-├── Monitored live PLC-SCADA plant operations across 3 production stages
-└── Reviewed 10+ industrial sensors / PLC panels; logged 15+ sensor deviation reports
-
-CodeBind Technologies     Embedded Systems Intern            (Jun 2023)
-└── Built automated car-parking system (Arduino + IR + embedded C) — see projects
-```
+Ridge regression won on every error metric — **MSE 0.0058 and ITAE 12.2788**, a 69%
+lower MSE than the feedforward network — and is cheaper to compute, which matters for
+real-time control. The paper also sweeps Δu_max, R and Q independently to show where
+each parameter stops helping.
 
 ---
 
-### `// stack`
+## Experience
 
-```python
-stack = {
-  "control_ml" : ["Predictive Modeling", "System Identification", "Pattern Recognition", "MPC"],
-  "tools"      : ["MATLAB", "Simulink", "LabVIEW", "Arduino IDE", "UiPath", "Tableau"],
-  "languages"  : ["Python", "C", "Java", "SQL"],
-  "domains"    : ["Embedded Systems", "PLC-SCADA", "Instrumentation", "Biomedical"],
-}
-```
+**Apollo Hospital** — Biomedical Engineering Intern · Trichy, India · Jun–Jul 2025
+Maintained 25+ diagnostic instruments across patient care units. Diagnosed and
+resolved 6 instruments with a senior engineer through hardware-software interfacing,
+sensor connectivity and signal validation. Traced recurring connectivity faults and
+inconsistent signal thresholds on 3 devices and restored all 3 to service.
 
----
+**Dalmia Cements** — Process Control & Automation Intern · Dalmiapuram, India · Jul 2024
+At a cement unit running crushing, pyroprocessing and packing, monitored 10 process
+parameters through PLC and SCADA/HMI dashboards. Traced 10 field instruments across
+3 production stages, recording signal type and measurement range for each. Documented
+15 process variations with sensor connectivity data.
 
-### `// education`
-
-```
-Northeastern University — Boston, MA
-└── M.S. Electrical & Computer Engineering            (Jan 2026 – May 2028)
-    ├── CGPA : 3.834
-    └── Coursework : Machine Learning, Robotics
-
-SASTRA Deemed University — India
-└── B.Tech, Electronics & Instrumentation Engineering (2021 – 2025)
-```
+**CodeBind Technologies** — Embedded Systems Intern · Chennai, India · Jun 2023
+Built an automated car parking system with Arduino, IR sensors and embedded C, plus
+an Android app. Cut slot-tracking time from 3 minutes to 10 seconds, with correct
+availability logged on 20 of 23 test runs.
 
 ---
 
-<div align="center">
+## Skills
 
-`STATUS: OPEN_TO_WORK` — Control Systems · Robotics · Automation Co-op
+**Control & automation** — PLC programming (IEC 61131-3 Ladder and Structured Text),
+PID and loop tuning, cascade and ratio control, model predictive control, SCADA and
+HMI, Modbus TCP
 
-[![Connect](https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/karishma-premnath)
-[![Read the paper](https://img.shields.io/badge/Read%20the%20IEEE%20paper-00629B?style=flat-square&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11545113)
+**Instrumentation & standards** — transducers, instrument index and I/O list, sensor
+selection and ranging, 4–20 mA loop design, signal conditioning and calibration, data
+acquisition, system identification, ISA-5.1 (P&ID), ISA-18.2 (alarm management),
+troubleshooting and commissioning, Factory Acceptance Test
 
-</div>
+**Programming & tools** — Python, C, Embedded C, Structured Text, SQL, CODESYS,
+OpenPLC, MATLAB, Simulink, LabVIEW, AutoCAD, Arduino IDE, Multisim
+
+---
+
+## Education
+
+**Northeastern University**, Boston — MS Electrical & Computer Engineering
+Jan 2026 – May 2028 · GPA 3.834 / 4.00 · Coursework: Machine Learning, Robotics
+
+**SASTRA Deemed University**, Thanjavur, India — BTech Electronics & Instrumentation
+Engineering · Oct 2021 – Sept 2025
